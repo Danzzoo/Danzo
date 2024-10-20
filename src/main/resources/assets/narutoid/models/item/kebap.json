@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-     "layer0": "narutomod:item/kebap"
+     "layer0": "narutoid:item/kebap"
   }
 
 }

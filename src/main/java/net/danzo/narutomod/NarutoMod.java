@@ -1,5 +1,7 @@
 package net.danzo.narutomod;
 
+import net.danzo.narutomod.block.ModBlocks;
+import net.danzo.narutomod.item.ModCreativeModeTabs;
 import net.danzo.narutomod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,7 +44,16 @@ public class NarutoMod {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register((modEventBus));
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+
+
+
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -68,7 +79,26 @@ public class NarutoMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     { if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
         event.accept(ModItems.KEBAP);
+        event.accept(ModItems.KEBAPS);
+
+
+
     }
+
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SHISH);
+
+
+
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks. KAMUI_DIMENSION_BLOCK);
+            event.accept(ModBlocks. EARTH_RELEASE_BLOCK);
+
+
+        }
+
+
 
     }
 

@@ -12,8 +12,10 @@ public class ModItems {
 
     public static final DeferredItem<Item> KEBAP = ITEMS.register( "kebap",
             () -> new Item(new Item.Properties()));
-
-
+    public static final DeferredItem<Item> KEBAPS = ITEMS.register( "kebaps",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SHISH = ITEMS.register( "shish",
+            () -> new Item(new Item.Properties()));
 
 
 
